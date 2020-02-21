@@ -5,4 +5,4 @@ services:
 
 script:
   - docker build -t atyenoria/janus-gateway-docker .
-  - echo "successfully deployed"
+  - echo "success"
