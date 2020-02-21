@@ -6,3 +6,10 @@ services:
 script:
   - docker build -t atyenoria/janus-gateway-docker .
   - echo "success"
+
+deploy:
+  provider: heroku
+  api_key: KoghnFlCH4f/LZT4/e3Tj8PxbW44RP9TTNnXsxns0qLyBeAF1uT9BqrwPR6Hjpc0hTRjpe6B8x3EPLV6FQiLFilop/UHLKRR9ohWdx9bMW3wR05i8SrQ+z+h9JP5MevZD3vO+R86fVMvr7lf1rFVNCvu/OwXMx5rI04K9JkhrMAGKSi0FJoW5p/R29MrbJ4htlzzu9hnNBWytTQ4rbny4G0IsRpkBopxTX+eDl7yd7jxSwPCIuI/CaHb5CKFLrSAWOZqYHs3jWx8SbJIt68qUoriJrzGFgadlqM2BQm91LHpaQfq4SePRvvNDCEkYhjUpfKLhoHAvIylugvZeGQ6u6bqqz5HmNEHJIn58ZZJO0QZRIo+EtaklYZWb5BgTJUqTbxMRa+N1EsHQJp9DZawOFShae57nIjYy7CLZl4Yd+nhWUJlMtZDZXSo5pusxIt0NCbM9CkImPjvOGn57Q92nkzOvhMRlBPwKppgffWgfXYF6y5JmaDjUYtPQ+BiYZ41rfkxA9dUSLz6eShs0UxaB0lIt5JsDnPCTC9ku31MU/Tl23PMLPz6jKNam3o1vxYg++ZaWWAEoRpSKlLTtt+v3klOrrVnBcK5yuWynCKCRnU1A+HirlVe1TLDLQvZbVgQ36ZfCI9kK1YaoRE1F3sjzz8RYYcZKexnaGratukh0dM=
+  run:
+    - "make build"
+    - "make run"
